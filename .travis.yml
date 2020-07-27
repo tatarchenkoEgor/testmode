@@ -1,0 +1,19 @@
+language: go
+go:
+- 1.12.x
+os:
+- linux
+dist: xenial
+branches:
+  only:
+  - test
+services:
+- docker
+git:
+  depth: 1
+
+script:
+  - echo "skipping tests"
+env:
+  global:
+  - GO111MODULE=on
